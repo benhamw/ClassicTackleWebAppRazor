@@ -1,0 +1,68 @@
+﻿@page
+@model FlyrodWebAppRazor.Pages.Flyrods.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Flyrod</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Flyrod.MakerId" class="control-label"></label>
+                <select asp-for="Flyrod.MakerId" class ="form-control" asp-items="ViewBag.MakerId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.Model" class="control-label"></label>
+                <input asp-for="Flyrod.Model" class="form-control" />
+                <span asp-validation-for="Flyrod.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.LengthFeet" class="control-label"></label>
+                <input asp-for="Flyrod.LengthFeet" class="form-control" />
+                <span asp-validation-for="Flyrod.LengthFeet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.Sections" class="control-label"></label>
+                <input asp-for="Flyrod.Sections" class="form-control" />
+                <span asp-validation-for="Flyrod.Sections" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.LineWeight" class="control-label"></label>
+                <input asp-for="Flyrod.LineWeight" class="form-control" />
+                <span asp-validation-for="Flyrod.LineWeight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.YearMade" class="control-label"></label>
+                <input asp-for="Flyrod.YearMade" class="form-control" />
+                <span asp-validation-for="Flyrod.YearMade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.Type" class="control-label"></label>
+                <input asp-for="Flyrod.Type" class="form-control" />
+                <span asp-validation-for="Flyrod.Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flyrod.Construction" class="control-label"></label>
+                <input asp-for="Flyrod.Construction" class="form-control" />
+                <span asp-validation-for="Flyrod.Construction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
